@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold display-5">Explore Our Menu</h1>
+    <p class="text-muted fs-5">Delicious food, just a click away!</p>
+  </div>
+
+  <div class="row mb-4 g-3 align-items-center">
+    <div class="col-md-7">
+      <div class="search-box shadow-sm rounded-pill d-flex align-items-center px-3 bg-white">
+        <i class="bi bi-search text-primary fs-5"></i>
+        <input type="text" class="form-control border-0 bg-transparent py-2 shadow-none" 
+               placeholder="What are you craving today?" 
+               [(ngModel)]="searchTerm" (ngModelChange)="filterItems()">
+      </div>
+    </div>
+    
+    <div class="col-md-3 ms-auto">
+      <select class="form-select rounded-pill shadow-sm border-0 py-2 px-4 fw-bold text-secondary" 
+              [(ngModel)]="sortOption" (ngModelChange)="applySort()">
+        <option value="default">Sort by: Default</option>
+        <option value="lowToHigh">Price: Low to High</option>
+        <option value="highToLow">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
+    <button *ngFor="let cat of ['All', 'Starters', 'Main Course', 'Burgers', 'Pizza', 'Desserts', 'Drinks']"
+            [class]="selectedCategory === cat ? 'btn btn-primary rounded-pill px-4 shadow' : 'btn btn-outline-primary rounded-pill px-4'"
+            (click)="onCategoryChange(cat)">
+      {{cat}}
+    </button>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4 col-sm-6" *ngFor="let food of filteredItems">
+      <app-menu-item [item]="food" (add)="addToCart(food)"></app-menu-item>
+    </div>
+  </div>
+
+  <div *ngIf="filteredItems.length === 0" class="text-center mt-5 py-5">
+    <i class="bi bi-emoji-frown fs-1 text-muted"></i>
+    <h3 class="mt-3 text-muted">No dishes found matching your search.</h3>
+  </div>
+</div>

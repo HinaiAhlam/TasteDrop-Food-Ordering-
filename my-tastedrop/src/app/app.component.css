@@ -1,0 +1,7 @@
+.main-background {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://tb-static.uber.com/prod/image-proc/processed_images/ee40b0155bc3d6580926c4b3ee5b7a9f/c9252e6c6cd289c588c3381bc77b1dfc.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}

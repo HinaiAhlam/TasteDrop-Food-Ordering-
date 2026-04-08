@@ -1,0 +1,85 @@
+/* تنسيق الشريط الأساسي */
+.custom-navbar {
+    background-color: #7c838a; /* اللون الرمادي المتوافق مع الصورة */
+    padding: 10px 0;
+    z-index: 1050;
+}
+
+/* تنسيق النص والشعار */
+.logo-text {
+    color: white;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #0d6efd; /* اللون الأزرق */
+    margin-right: 4px;
+    border-radius: 2px;
+}
+
+/* زر العودة */
+.btn-back {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* أيقونات الوضع الليلي */
+.btn-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* حاوية السلة الدائرية الزرقاء */
+.cart-icon-wrapper {
+    background-color: #0d6efd; /* اللون الأزرق الساطع */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cart-icon-wrapper:hover {
+    transform: scale(1.1);
+}
+
+/* عداد السلة الأحمر الصغير */
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #dc3545; /* اللون الأحمر */
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #7c838a; /* ليتناسب مع خلفية الناف بار */
+}

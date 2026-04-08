@@ -1,0 +1,86 @@
+/* 1. إعدادات المتغيرات للسهولة */
+:root {
+  --primary-color: #ffc107;
+  --dark-bg: #121212;
+  --card-dark: #1e1e1e;
+}
+
+/* 2. الوضع الفاتح (الافتراضي) - التأكد من ثبات الأحجام */
+.card-img-top {
+  height: 200px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+.rating-badge {
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  background: white !important;
+  color: #333 !important;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  font-size: 0.85rem !important;
+  z-index: 5 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
+}
+
+/* 3. الوضع الداكن - إصلاح المشاكل البصرية */
+body.dark {
+  background-color: var(--dark-bg) !important;
+  color: #ffffff !important;
+}
+
+/* إصلاح وضوح الناف بار (Home, Menu) */
+body.dark .navbar {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+body.dark .nav-link, 
+body.dark .navbar-brand,
+body.dark .bi-moon-stars {
+  color: #ffffff !important;
+}
+
+/* إصلاح الكروت في الدارك مود */
+body.dark .card {
+  background-color: var(--card-dark) !important;
+  border: 1px solid #333 !important;
+  color: white !important;
+}
+
+/* توضيح وصف الوجبة (المشكلة الأكبر في الفيديو) */
+body.dark .card-text.text-muted,
+body.dark .small.text-muted,
+body.dark .text-muted {
+  color: #b0b0b0 !important; /* رمادي فاتح جداً للوضوح */
+}
+
+/* الحفاظ على النجمة واضحة وخلفيتها بيضاء */
+body.dark .rating-badge {
+  background: white !important;
+  color: black !important;
+}
+
+/* إصلاح أزرار التحكم في الكمية (+ / -) */
+body.dark .bg-light {
+  background-color: #2d2d2d !important;
+  border-color: #444 !important;
+}
+
+body.dark .bg-light span {
+  color: white !important;
+}
+
+/* إصلاح ألوان خانات الإدخال (البحث والفورم) */
+body.dark .form-control {
+  background-color: #2c2c2c !important;
+  color: white !important;
+  border-color: #444 !important;
+}
+
+body.dark .form-control::placeholder {
+  color: #888 !important;
+}

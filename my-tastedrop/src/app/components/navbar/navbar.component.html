@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-primary" routerLink="/">
+      TasteDrop <span class="text-warning">■■</span>
+    </a>
+
+    <div class="d-flex align-items-center order-lg-last">
+      <button class="btn btn-link text-dark shadow-none me-3" (click)="toggleDarkMode()" title="Toggle Dark Mode">
+        <i class="bi" [ngClass]="isDarkMode ? 'bi-sun-fill text-warning' : 'bi-moon-stars-fill'"></i>
+      </button>
+
+      <a routerLink="/cart" class="btn btn-primary rounded-pill position-relative px-3 shadow-sm">
+        <i class="bi bi-cart3"></i>
+        <span *ngIf="cartService.getCartCount() > 0" 
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light">
+          {{ cartService.getCartCount() }}
+        </span>
+      </a>
+    </div>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto fw-semibold">
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/" routerLinkActive="text-primary">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/menu" routerLinkActive="text-primary">Menu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
