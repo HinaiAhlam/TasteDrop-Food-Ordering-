@@ -1,0 +1,136 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Grilled Chicken Burger",
+      "category": "Burgers",
+      "price": 3.5,
+      "available": true,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1565299507177-b0ac66763828?q=80&w=500",
+      "description": "Juicy grilled chicken fillet with lettuce, tomato, and garlic mayo in a toasted bun."
+    },
+    {
+      "id": 2,
+      "name": "Beef Smash Burger",
+      "category": "Burgers",
+      "price": 4.2,
+      "available": true,
+      "rating": 4.8,
+      "image": "https://tse4.mm.bing.net/th/id/OIP.07unJeU8rQRQNHIldlqnFgHaEf?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "description": "Double smashed beef patties with cheddar, pickles, and special sauce."
+    },
+    {
+      "id": 3,
+      "name": "Margherita Pizza",
+      "category": "Pizza",
+      "price": 5.0,
+      "available": true,
+      "rating": 4.5,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.v3mGmW4rrFSHxOl403YS2gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "description": "Classic pizza with tomato sauce, fresh mozzarella, and basil."
+    },
+    {
+      "id": 4,
+      "name": "BBQ Chicken Pizza",
+      "category": "Pizza",
+      "price": 6.0,
+      "available": true,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500",
+      "description": "Smoky BBQ base with grilled chicken, onions, and mozzarella."
+    },
+    {
+      "id": 5,
+      "name": "Lamb Kabsa",
+      "category": "Main Course",
+      "price": 5.5,
+      "available": true,
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=500",
+      "description": "Slow-cooked spiced lamb over fragrant basmati rice with nuts and raisins."
+    },
+    {
+      "id": 6,
+      "name": "Grilled Salmon Fillet",
+      "category": "Main Course",
+      "price": 7.0,
+      "available": false,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=500",
+      "description": "Fresh Atlantic salmon grilled with lemon butter and herbs, served with vegetables."
+    },
+    {
+      "id": 7,
+      "name": "Crispy Calamari",
+      "category": "Starters",
+      "price": 2.8,
+      "available": true,
+      "rating": 4.4,
+      "image": "https://www.willcookforsmiles.com/wp-content/uploads/2021/07/Calamari-6.jpg",
+      "description": "Lightly battered squid rings served with tartare sauce."
+    },
+    {
+      "id": 8,
+      "name": "Hummus & Pita",
+      "category": "Starters",
+      "price": 1.8,
+      "available": true,
+      "rating": 4.3,
+      "image": "https://thesinglegourmand.com/wp-content/uploads/2014/03/hummus-pita-bread-1024x683.png",
+      "description": "Creamy homemade hummus drizzled with olive oil, served with warm pita."
+    },
+    {
+      "id": 9,
+      "name": "Chocolate Lava Cake",
+      "category": "Desserts",
+      "price": 2.5,
+      "available": true,
+      "rating": 4.9,
+      "image": "https://tse4.mm.bing.net/th/id/OIP.ciaIrBk1g5ztaNSOWjH84gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "description": "Warm chocolate cake with a gooey molten centre, served with vanilla ice cream."
+    },
+    {
+      "id": 10,
+      "name": "Kunafa",
+      "category": "Desserts",
+      "price": 2.0,
+      "available": true,
+      "rating": 4.8,
+      "image": "https://as2.ftcdn.net/v2/jpg/04/72/88/21/1000_F_472882125_gqTob2S2n4Gzd07aezbhV1yyiLO58gK3.jpg",
+      "description": "Traditional cheese-filled pastry soaked in sugar syrup and topped with pistachios."
+    },
+    {
+      "id": 11,
+      "name": "Fresh Mango Juice",
+      "category": "Drinks",
+      "price": 1.2,
+      "available": true,
+      "rating": 4.6,
+      "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/04/mango-juice-1.jpg",
+      "description": "100% freshly squeezed mango juice with no added sugar."
+    },
+    {
+      "id": 12,
+      "name": "Sparkling Lemonade",
+      "category": "Drinks",
+      "price": 1.0,
+      "available": true,
+      "rating": 4.4,
+      "image": "https://i.pinimg.com/originals/eb/15/f7/eb15f79a9085d44749547744eba68eb9.jpg",
+      "description": "Refreshing lemonade with sparkling water and fresh mint."
+    }
+  ],
+  "promo_codes": [
+    { "code": "TASTE10", "discount": 10, "type": "percentage" },
+    { "code": "FREEDEL", "discount": 1.5, "type": "flat" }
+  ],
+"restaurant_info": {
+    "name": "TasteDrop Kitchen",
+    "address": "17 Qurum Boulevard, Muscat, Oman",
+    "phone": "+968 2499 5500",
+    "email": "orders@tastedrop.com",
+    "deliveryHours": "Daily 11:00 AM - 11:00 PM",
+    "deliveryFee": 1.5
+}
+}

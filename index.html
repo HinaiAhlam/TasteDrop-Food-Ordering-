@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteDrop | Order Fresh, Eat Happy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body class="home-page">
+
+    <nav class="navbar navbar-expand-lg fixed-top transition-all" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                TasteDrop <span class="text-primary">■■</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center ms-lg-4">
+                    <button class="btn btn-link nav-link me-3 shadow-none" id="darkModeToggle">
+                        <i class="bi bi-moon-stars-fill fs-5"></i>
+                    </button>
+                    <a href="cart.html" class="btn btn-primary position-relative rounded-pill px-3">
+                        <i class="bi bi-cart3"></i>
+                        <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section d-flex align-items-center text-center text-white">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <h1 class="display-2 fw-bold mb-3">Order Fresh, Eat Happy</h1>
+            <p class="lead fs-4 mb-4">Discover the best food and drinks in Muscat delivered fast to your door.</p>
+            <a href="menu.html" class="btn btn-warning btn-lg px-5 py-3 fw-bold rounded-pill shadow">Order Now</a>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container text-center py-4">
+            <h2 class="fw-bold mb-5">How It Works</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <i class="bi bi-search display-4 text-primary mb-3"></i>
+                    <h4 class="fw-bold">Browse Menu</h4>
+                    <p class="text-muted">Explore our diverse range of delicious cuisines.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-cart-plus display-4 text-primary mb-3"></i>
+                    <h4 class="fw-bold">Add to Cart</h4>
+                    <p class="text-muted">Select your favorites and customize your order.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-truck display-4 text-primary mb-3"></i>
+                    <h4 class="fw-bold">Get Delivered</h4>
+                    <p class="text-muted">Enjoy fresh food delivered quickly to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light popular-section">
+        <div class="container">
+            <div class="position-relative mb-5 text-center">
+                <h2 class="fw-bold display-5 mb-0">Popular Dishes</h2>
+                <a href="menu.html" class="btn btn-outline-primary rounded-pill px-4 position-absolute end-0 top-50 translate-middle-y d-none d-md-inline-block">
+                    View All Menu
+                </a>
+            </div>
+            
+            <div class="row g-4 justify-content-center" id="popularDishesGrid"></div>
+
+            <div class="text-center d-md-none mt-4">
+                <a href="menu.html" class="btn btn-outline-primary rounded-pill px-4">View All Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-4 text-center">
+            <h2 class="fw-bold mb-5">What Our Customers Say</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="fst-italic text-muted">"Incredible taste and very fast delivery!"</p>
+                        <h6 class="fw-bold mb-0">- Salim Al-Harthy</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                        <p class="fst-italic text-muted">"Best burgers in Muscat. Highly recommended."</p>
+                        <h6 class="fw-bold mb-0">- Sarah James</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="fst-italic text-muted">"The Kunafa is heavenly, still warm when it arrived!"</p>
+                        <h6 class="fw-bold mb-0">- Mazin Al-Said</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-3">TasteDrop <span class="text-primary">■■</span></h4>
+                    <div class="footer-info">
+                        <p id="footer-address" class="mb-1 text-secondary">Loading address...</p>
+                        <p id="footer-phone" class="mb-1 text-secondary">Loading phone...</p>
+                        <p id="footer-email" class="text-secondary">Loading email...</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <h5 class="fw-bold mb-3">Delivery Hours</h5>
+                    <p id="footer-hours" class="text-secondary">Loading hours...</p>
+                </div>
+                <div class="col-lg-4 text-lg-end text-center">
+                    <h5 class="fw-bold mb-3">Follow Us</h5>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-4">
+                        <a href="#" class="text-reset"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-reset"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <p class="text-center text-secondary small mb-0">© 2026 TasteDrop Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

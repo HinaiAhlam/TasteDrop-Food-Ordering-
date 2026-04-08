@@ -1,0 +1,140 @@
+/* Project: TasteDrop - Official Full Style
+   Author: Ahlam
+   Target: Fixed Dark Mode Contrast & Smart Navbar
+*/
+
+/* --- 1. المتغيرات الأساسية --- */
+:root {
+    --primary-color: #ffc107;     /* الذهبي للأسعار والأزرار */
+    --primary-hover: #e0a800;
+    --dark-bg: #0f172a;          /* الكحلي العميق للخلفية */
+    --dark-card: #1e293b;        /* لون الكروت الداكن */
+    --light-text: #ffffff;       /* أبيض ناصع */
+    --muted-text: #cbd5e1;       /* رمادي فاتح جداً للوضوح العالي */
+    --transition: all 0.3s ease;
+}
+
+/* --- 2. الإعدادات العامة --- */
+body {
+    background-color: #f8fafc;
+    color: #1e293b; 
+    transition: var(--transition);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+}
+
+/* --- 3. Hero Section & Overlay --- */
+.hero-section {
+    height: 100vh;
+    background: url('https://tb-static.uber.com/prod/image-proc/processed_images/ee40b0155bc3d6580926c4b3ee5b7a9f/c9252e6c6cd289c588c3381bc77b1dfc.jpeg') no-repeat center center/cover fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.65); 
+    z-index: 1;
+}
+
+/* --- 4. Navbar (شفافية ذكية بلمسة زجاجية) --- */
+.navbar {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.navbar .nav-link, .navbar .navbar-brand, .navbar .bi-cart3 {
+    color: #ffffff !important;
+}
+
+/* --- 5. الكروت والأسعار (الوضع الفاتح) --- */
+.card {
+    transition: var(--transition);
+    border-radius: 15px;
+}
+
+.price, .product-price {
+    color: var(--primary-color) !important;
+    font-weight: 800 !important;
+}
+
+/* --- 6. الدارك مود الشامل (إصلاح كافة المشاكل الظاهرة في الصور) --- */
+
+/* تفعيل الخلفية الداكنة */
+.dark-mode body, 
+.dark-mode {
+    background-color: var(--dark-bg) !important;
+    color: var(--light-text) !important;
+}
+
+/* إزالة بياض السكاشن */
+.dark-mode section, 
+.dark-mode .bg-white, 
+.dark-mode .bg-light {
+    background-color: transparent !important;
+}
+
+/* تنسيق الكروت في الدارك مود */
+.dark-mode .card {
+    background-color: var(--dark-card) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: var(--light-text) !important;
+}
+
+/* --- إصلاح أسماء العملاء (Salim, Sarah, Mazin) --- */
+/* الكود يستهدف وسم h6 داخل الكرت لإجباره على اللون الأبيض */
+.dark-mode .card h6.fw-bold {
+    color: var(--light-text) !important;
+}
+
+/* إصلاح النصوص الباهتة (مثل الاقتباسات "Incredible taste...") */
+.dark-mode .text-muted, 
+.dark-mode p.fst-italic {
+    color: var(--muted-text) !important;
+}
+
+/* --- إصلاح أرقام الكمية (الرقم 1 بين الـ + والـ -) --- */
+.dark-mode .quantity-controls span,
+.dark-mode .qty-display,
+.dark-mode .quantity-value {
+    color: var(--light-text) !important;
+    font-weight: bold !important;
+}
+
+/* --- إصلاح نصوص الفوتر المختفية --- */
+.dark-mode footer h4, 
+.dark-mode footer h5 {
+    color: var(--light-text) !important;
+}
+
+.dark-mode footer .text-secondary,
+.dark-mode #footer-address,
+.dark-mode #footer-phone,
+.dark-mode #footer-email {
+    color: var(--muted-text) !important;
+}
+
+/* النجوم */
+.text-warning i.bi-star-fill, 
+.text-warning i.bi-star-half {
+    color: var(--primary-color) !important;
+}
+
+/* --- 7. الأزرار --- */
+.btn-warning {
+    background-color: var(--primary-color) !important;
+    border: none !important;
+    color: #000 !important;
+    font-weight: 700;
+}
+
+.btn-warning:hover {
+    background-color: var(--primary-hover) !important;
+    transform: scale(1.05);
+}
